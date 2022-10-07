@@ -7,11 +7,17 @@ import Filter from './components/Filter'
 const App = () => {
     const [currFilter, setFilter] = useState('')
     const [countries, setCountries] = useState([])
+    const [countriesToShow, setCountriesToShow] = useState([])
+
+    useEffect(() => setCountriesToShow(countries.filter((country) => country.name.common.toLowerCase().includes(currFilter))), [currFilter, countries])
 
     const filterController = (event) => {
         event.preventDefault()
-        console.log(event.target.value)
         setFilter(event.target.value)
+    }
+
+    const buttonHandler = (country) => {
+        setCountriesToShow([country])
     }
 
     useEffect(() => {
@@ -22,11 +28,9 @@ const App = () => {
             })
     }, [])
 
-    const countriesToShow = countries.filter((country) => country.name.common.toLowerCase().includes(currFilter))
-
     return <div>
         <Filter callback={filterController}></Filter>
-        <CountriesDisplay countries={countriesToShow}></CountriesDisplay>
+        <CountriesDisplay callback={buttonHandler} countries={countriesToShow}></CountriesDisplay>
     </div>
     
 }
