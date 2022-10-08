@@ -23,7 +23,7 @@ This is a list of all of the topics in FullStackOpen, with the checked-off ones 
     - [x] Forms - [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2) and [Countries](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/countries)
     - [x] Getting data from servers - [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2) and [Countries](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/countries)
     - [x] Altering data in servers - only [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2)
-    - [ ] Adding styles to React app
+    - [x] Adding styles to React app
 - **Chapter 3: Programming Servers With NodeJS and Express**
     - [ ] Node.js and Express
     - [ ] Deploying an app to the internet
