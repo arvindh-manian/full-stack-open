@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 import Note from './components/Note'
+import noteService from './services/notes'
 
 const App = () => {
 
@@ -8,11 +8,11 @@ const App = () => {
     const [newNote, setNewNote] = useState('')
     const [showAll, setShowAll] = useState(true)
 
-    const hook = () => axios
-                        .get('http://localhost:3001/notes')
-                        .then(response => {
-                            setNotes(response.data)
-                        })
+    const hook = () => {noteService
+                        .getAll()
+                        .then(notesList => {
+                            setNotes(notesList)
+                        })}
 
     useEffect(hook, [])
 
@@ -21,18 +21,39 @@ const App = () => {
 
     const addNote = (event) => {
         event.preventDefault()
-        const newNoteObject = {
-            id: notes.length + 1,
+        const noteObject = {
             content: newNote,
-            important: Math.random() < 0.5,
-            date: new Date().toISOString()
+            date: new Date().toISOString(),
+            important: Math.random() < 0.5
         }
-        setNotes(notes.concat(newNoteObject))
-        setNewNote('')
+
+        noteService
+            .create(noteObject)
+            .then((returnedNote) => {
+                setNotes(notes.concat(returnedNote))
+                setNewNote('')
+            })
     }
 
     const handleNoteChange = (event) => {
         setNewNote(event.target.value)
+    }
+
+    const toggleImportanceOf = (noteID) => {
+        const note = notes.find(n => n.id === noteID)
+        const changedNote = {...note, important: !note.important}
+
+        noteService
+            .update(noteID, changedNote)
+            .then((returnedNote) => {
+                setNotes(notes.map(n => n.id !== noteID ? n : returnedNote))
+            })
+            .catch((error) => {
+                alert(
+                    `the note ${note.content} was already deleted from the server`
+                )
+                setNotes(notes.filter((n) => n.id !== noteID))
+            })
     }
 
     return (
@@ -43,7 +64,7 @@ const App = () => {
             </div>
             <ul>
                 {notesToShow.map(note => 
-                    <Note key={note.id} note={note}/>
+                    <Note key={note.id} note={note} updateImportance={() => toggleImportanceOf(note.id)}/>
                 )}
             </ul>
             <form onSubmit={addNote}>
