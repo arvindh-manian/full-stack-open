@@ -13,7 +13,9 @@ const addPerson = (newPerson) => {
 }
 
 const deletePerson = (id) => {
-    axios.delete(`${baseUrl}/${id}`)
+    return axios.delete(`${baseUrl}/${id}`).then(() => {
+        return {}
+    })
 }
 
 const replaceNumber = (id, newPerson) => {
