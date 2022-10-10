@@ -4,14 +4,14 @@ This is the repository to store my assignments and submissions for the [Universi
 
 # Repository format
 - Each chapter has a corresponding folder
-- The folders (except for part0, as that was introductory) have top-level READMEs that explain the concepts from that unit and discuss the completed projects
+- The folders that I've completed (except for part0, as that was introductory) have top-level READMEs that explain the concepts from that unit and discuss the completed projects
 - Projects mentioned in the READMEs have associated READMEs that go a bit more in-depth about the technologies and concepts applied in their creations
 - There are more projects in each chapter, but I've only opted to include the ones that
     - Seemed to be significant in terms of new content
     - Didn't provide a lot of code for me to start with
 
 # Top-Level View of FullStackOpen
-This is a list of all of the topics in FullStackOpen, with the checked-off ones being the topics I've covered. I've also attached links to the projects that deal with the listed topics.
+This is a list of all of the topics in FullStackOpen, with the checked-off ones being the topics I've covered. I've also attached links to the projects from that chapter that deal with the listed topics.
 
 - **Chapter 1: Introduction to React**
     - [x] Introduction to React
@@ -25,7 +25,7 @@ This is a list of all of the topics in FullStackOpen, with the checked-off ones 
     - [x] Altering data in servers - only [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2)
     - [x] Adding styles to React app
 - **Chapter 3: Programming Servers With NodeJS and Express**
-    - [ ] Node.js and Express
+    - [x] Node.js and Express
     - [ ] Deploying an app to the internet
     - [ ] Saving data to MongoDB
     - [ ] Validation and ESLint
