@@ -19,10 +19,10 @@ This is a list of all of the topics in FullStackOpen, with the checked-off ones 
     - [x] Component state & event handlers
     - [x] Complex states & debugging - see [Anecdotes](https://github.com/arvindh-manian/full-stack-open/tree/main/part1/anecdotes)
 - **Chapter 2: Communicating With Servers**
-    - [x] Rendering collections & intro to modules - see [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2) and [Countries](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/countries)
-    - [x] Forms - [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2) and [Countries](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/countries)
-    - [x] Getting data from servers - [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2) and [Countries](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/countries)
-    - [x] Altering data in servers - only [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2)
+    - [x] Rendering collections & intro to modules - see [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/phonebook) and [Countries](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/countries)
+    - [x] Forms - [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/phonebook) and [Countries](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/countries)
+    - [x] Getting data from servers - [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/phonebook) and [Countries](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/countries)
+    - [x] Altering data in servers - only [Phonebook](https://github.com/arvindh-manian/full-stack-open/tree/main/part2/phonebook)
     - [x] Adding styles to React app
 - **Chapter 3: Programming Servers With NodeJS and Express**
     - [x] Node.js and Express
