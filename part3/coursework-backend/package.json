@@ -6,11 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build:ui": "rm -rf build && cd ../coursework-frontend && npm run build && cp -r build ../coursework-backend",
+    "deploy": "fly deploy",
+    "deploy:full": "npm run build:ui && npm run deploy"
   },
   "author": "Arvindh Manian",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2"
   },
   "devDependencies": {
