@@ -26,7 +26,7 @@ This is a list of all of the topics in FullStackOpen, with the checked-off ones 
     - [x] Adding styles to React app
 - **Chapter 3: Programming Servers With NodeJS and Express**
     - [x] Node.js and Express
-    - [ ] Deploying an app to the internet
+    - [x] Deploying an app to the internet
     - [ ] Saving data to MongoDB
     - [ ] Validation and ESLint
 - **Chapter 4: Testing Express Servers & User Authentication**
